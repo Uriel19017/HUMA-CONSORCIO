@@ -1,0 +1,877 @@
+:root{
+    --oscuro:#07070A;
+    --azulOscuro:#7fb88c;
+    --azulClaro:#024769;
+    --blanco:#FEFCFB;
+    --titulos:'Silk Serif Regular';
+    --parrafos:'Silk Serif Regular';
+}
+header{
+    display: flex;
+    min-height: 70px;
+    align-items: center;
+    padding: 10px;
+}
+.logo img{
+    height: 100px;
+    margin-right: 10px;
+    color: #7fb88c;
+}
+
+html{
+    box-sizing: border-box;
+    font-size: 62.5%;
+    /* scroll-behavior: smooth; */
+}
+/* Estilos generales */
+body {
+    min-height: 100vh; /* Alto mínimo del cuerpo al 100% de la altura de la ventana */
+    margin: 0; /* Eliminar márgenes predeterminados */
+    overflow-x: hidden; /* Ocultar el desplazamiento horizontal */
+    font-family: Arial, sans-serif; /* Establecer una fuente predeterminada */
+}
+
+/* Otros estilos de tu página */
+/* ... */
+
+
+*,*::before, *::after{
+    box-sizing: inherit;
+}
+/*Estilos globales*/
+h1, h2, h3{
+    font-family: var(--titulos);
+}
+
+p, a{
+    font-family: var(--parrafos);
+}
+
+.ocultar{
+    display: none;
+}
+
+.contenedor{
+    margin: 0 auto;
+    max-width: 120rem;
+    width: 95%;
+}
+
+.btn{
+  padding: 1rem 4rem;
+  font-weight: bold;
+  font-family: var(--parrafos);
+  font-size: 2rem;
+  border: none;
+  color: var(--blanco);
+  
+}
+.bordes{
+   border: 2px solid var(--azulClaro);
+   color: var(--azulClaro);
+   text-decoration: none;
+   display: block;
+   text-align: center;
+   transition: background-color .3s ease-in-out;
+ 
+    
+}
+@media(min-width: 768px) {
+    .bordes{
+        display: inline-block;
+        margin-top: 2rem;
+    }
+}
+
+.bordes:hover{
+    background-color: var(--azulClaro);
+    color: var(--blanco);
+}
+.btn:hover{
+    cursor: pointer;
+}
+
+.azul{
+    background-color: #7fb88c;
+}
+@keyframes desplazamiento {
+
+    /*desplazamiento incial*/
+
+    0%{
+        transform: translateX(-100%);
+    }
+
+    100%{
+        transform: translateX(0);
+    }
+}
+
+/*encabezado*/
+
+
+@media(min-width: 768px) {
+    .encabezado{
+        background-attachment: fixed;
+    }
+}
+
+.logo h2{
+    font-size: 3rem;
+}
+
+.logo h2 span{
+    color: #7fb88c;
+    color: var(--azulClaro);
+}
+
+.logo {
+
+    display: flex;
+    align-items: center;
+}
+.contenido-navegacion{
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    background-color: var(--blanco);
+    box-shadow: 10px 10px 16px -6px rgba(0,0,0,0.45);
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 3;
+}
+
+.navegacion{
+    background-color: var(--blanco);
+    position: absolute;
+    left: 0;
+    top: 70px;
+    width: 100%;
+    animation: desplazamiento .5s ease-in-out;
+}
+
+
+.color-consorcio {
+    color: #7fb88c; /* Cambia "red" por el color que desees */
+}
+
+
+@media(min-width: 768px) {
+    .ocultar{
+        display: inline;
+    }
+}
+
+.navegacion a{
+    display: block;
+    font-size: 2rem;
+    padding: 1.1rem;
+    color: var(--oscuro);
+    text-decoration: none;
+    transition: background-color .3s ease-in-out;
+
+}
+.navegacion a:hover{
+    background-color: var(--azulClaro);
+    color: var(--blanco);
+}
+
+@media(min-width: 768px) {
+    .navegacion a{
+        display: inline;
+    }
+    
+}
+@media(min-width: 768px) {
+    .navegacion{
+        position: relative;
+        top: unset;
+        width: auto;
+        background-color: unset;
+        animation: unset;
+    }
+}
+.hamburguesa span{
+    width: 5rem;
+    height: 1rem;
+    border: 3px solid white;
+    background-color: var(--oscuro);
+    display: block;
+}
+
+@media(min-width: 768px) {
+    .hamburguesa{
+        display: none;
+    }
+}
+
+/*contenido del encabezado*/
+
+
+/*ventajas*/
+@media(min-width: 768px) {
+    .contenido-ventajas{
+        display: grid;
+        grid-template-columns: repeat(3,1fr);
+        gap: 3rem;
+    }
+}
+.ventajas{
+    padding: 5rem;
+    background-color: var(--azulOscuro);
+    text-align: justify;
+}
+
+.ventaja{
+    color: var(--blanco);
+    text-align: center;
+}
+.ventaja a{
+    text-decoration: none;
+    font-family: 'Silk Serif Regular';
+}
+
+.ventaja i {
+    font-size: 4rem;
+    color: white; /* Cambia el color del icono a blanco */
+    
+}
+
+.ventaja h3 {
+    font-size: 2.5rem;
+    color: white; /* Cambia el color del texto a blanco */
+    text-decoration: none; /* Elimina cualquier decoración de enlace */
+    cursor: default; /* Cambia el cursor a predeterminado para evitar que parezca un enlace */
+    pointer-events: none; /* Desactiva eventos de puntero para evitar comportamiento de enlace */
+    user-select: none; /* Evita la selección de texto para mejorar la apariencia */
+    font-family: 'Silk Serif Regular';
+}
+
+
+
+.ventaja p{
+    font-size: 2rem;
+    text-align: justify;
+    
+}
+
+
+/*seccion sobre nosotros*/
+.nosotros h2{
+    text-align: justify;
+    font-size: 4rem;
+    color: var(--azulClaro);
+}
+@media(min-width: 768px) {
+    .nosotros h2{
+        font-size: 5rem;
+    }
+}
+.contenido-nosotros{
+    background-image: url('../img/Foto1.jpg');
+    display: grid;
+    grid-template-rows: repeat(2,1fr);
+    background-size: cover;
+    background-position: center center;
+}
+
+@media(min-width: 768px) {
+    .contenido-nosotros{
+        grid-template-columns:repeat(2,1fr);
+        /* background-attachment: fixed; */
+    }
+}
+
+
+.texto-nosotros{
+    padding: 2rem;
+    grid-row: 2/3;
+    background-color: var(--blanco);
+}
+
+@media(min-width: 768px) {
+    .texto-nosotros{
+        padding:5rem;
+    }
+}
+
+.texto-nosotros h3{
+    font-size: 4rem;
+    color: var(--azulClaro);
+    text-align: center;
+}
+
+.texto-nosotros p{
+    font-size: 2.2rem;
+    text-align: center;
+}
+@media(min-width: 768px) {
+    .texto-nosotros p{
+        text-align: left;
+    }
+}
+
+/*Seccion servicios*/
+.servicios {
+    padding-top: 6rem;
+}
+
+.servicios h2 {
+    font-size: 6rem;
+    text-align: center;
+    color: var(--azulClaro);
+}
+
+@media(min-width: 768px) {
+    .contenido-servicios {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 4rem; /* Ajustamos el gap para que haya más espacio entre las columnas */
+    }
+}
+
+.servicio {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 4rem; /* Añadimos margen inferior para separar los servicios */
+}
+
+.servicio i {
+    background-color: var(--azulClaro);
+    width: 10rem;
+    height: 10rem;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--blanco);
+    font-size: 3rem;
+    box-shadow: 10px 10px 16px -6px rgba(0,0,0,0.45);
+    transition: all .3s ease-in-out;
+}
+
+.servicio h3 {
+    font-size: 2.2rem;
+    color: var(--azulOscuro);
+}
+
+.servicio p {
+    font-size: 1.8rem;
+    text-align: justify; /* Justifica el texto */
+    margin-top: 2rem; /* Añadimos margen superior para separar el texto del ícono */
+}
+
+.servicio a {
+    font-size: 2.0rem;
+    text-align: justify; /* Justifica el texto */
+}
+
+@media(min-width: 768px) {
+    .servicio p {
+        text-align: justify; /* Justifica el texto en pantallas más grandes */
+    }
+
+    .servicio a {
+        text-align: justify; /* Justifica el texto en pantallas más grandes */
+    }
+
+    .servicio:hover {
+        cursor: pointer;
+    }
+
+    .servicio:hover .fas {
+        background-color: var(--blanco);
+        color: var(--azulClaro);
+    }
+}
+
+/* Estilos para ventajas en general */
+.contacto {
+    padding-top: 5rem;
+}
+
+.contacto h2 {
+    text-align: center;
+    color: var(--azulClaro);
+    font-size: 5rem;
+}
+
+@media (min-width: 768px) {
+    .contenido-contacto {
+        display: flex;
+        align-items: center; /* Centra verticalmente los elementos */
+        gap: 1rem;
+    }
+}
+
+.informacion-contacto {
+    position: relative; /* Añade posicionamiento relativo */
+    background-image: url('../img/contacto.jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
+    flex: 1; /* Ocupa el espacio disponible */
+    height: 50vh; /* Ajusta la altura para que la imagen se vea completa */
+}
+
+.informacion-contacto h3,
+.informacion-contacto p {
+    position: absolute;
+    font-size: 2vw;
+    color: white;
+    margin: 0;
+    text-align: center;
+    left: 50%; /* Centra horizontalmente */
+    transform: translateX(-50%);
+}
+
+.informacion-contacto h3 {
+    bottom: 50%; /* Alinea hacia arriba */
+}
+
+.informacion-contacto p {
+    top: 50%; /* Alinea hacia abajo */
+}
+
+.mapa {
+    position: relative; /* Asegura que la posición sea relativa */
+    z-index: 1; /* Ajusta el orden de apilamiento */
+    width: 500px; /* Ancho específico en píxeles */
+    height: 300px; /* Alto específico en píxeles */
+    margin-left: 20px; /* Margen izquierdo para separar el mapa de la imagen */
+    align-self: flex-start; /* Alinear el mapa verticalmente con la imagen */
+    top: -40px; /* Mover el mapa 20 píxeles hacia arriba */
+}
+
+
+/* Media Query para pantallas medianas y grandes */
+@media(min-width: 768px) {
+    .mapa {
+        width: 300px; /* Ancho específico en píxeles para pantallas medianas y grandes */
+        height: 200px; /* Alto específico en píxeles para pantallas medianas y grandes */
+        margin-left: 10px; /* Margen izquierdo para separar el mapa de la imagen */
+        align-self: center; /* Alinear el mapa verticalmente al centro con la imagen */
+    }
+}
+
+
+/* Media Query para pantallas medianas y grandes */
+@media (min-width: 768px) {
+    .mapa {
+        margin-left: 10px; /* Margen izquierdo para separar el mapa de la imagen */
+    }
+}
+
+
+
+/* Video */
+video {
+    position: relative;
+    top: 0;
+    left: 0;
+    width: 100%; /* Ancho al 100% del contenedor padre */
+    height: 450px; /* Altura automática según el ancho */
+    object-fit: cover;
+    z-index: 0;
+}
+
+/* Contenedor de texto */
+.con_texto {
+    width: 100%; /* Ancho al 100% del contenedor padre */
+    height: auto; /* Altura automática según el contenido */
+    position: absolute;
+    text-align: center;
+    display: flex;
+    justify-content: center; /* Centrar horizontalmente */
+    align-items: center; /* Centrar verticalmente */
+    padding: 2rem; /* Agregar espacio alrededor del contenido */
+    text-shadow: 0 0 5px rgba(255, 255, 255, 0.932); /* Subrayado claro */
+}
+
+/* Media Query para pantallas medianas y grandes */
+@media(min-width: 768px) {
+    .con_texto {
+        padding: 4rem; /* Aumentar el espacio alrededor del contenido */
+    }
+}
+
+/* Media Query para pantallas grandes */
+@media(min-width: 1200px) {
+    .con_texto {
+        padding: 6rem; /* Aumentar el espacio alrededor del contenido */
+    }
+}
+
+
+/* Media Query para pantallas pequeñas */
+@media(max-width: 767px) {
+    video {
+        height: 100%; /* Altura al 100% del contenedor padre */
+        width: auto; /* Ancho automático según la altura */
+    }
+
+    .con_texto {
+        flex-direction: column; /* Cambiar la dirección del flexbox a columna */
+        align-items: flex-start; /* Alinear el contenido a la izquierda */
+        padding: 2rem; /* Restaurar el espacio alrededor del contenido */
+    }
+}
+
+
+h1{
+    font-size: 50px;
+    font-weight: 900;
+    z-index: 1;
+    color: #024769;
+    margin-bottom: 30px;
+}
+
+h1::after{
+    display: block;
+    width: 30%;
+    height: 10px;
+    content: "";
+    margin: auto;
+}
+.mapa {
+    width: 90%; /* Ancho del mapa igual al 90% del contenedor */
+    height: 80%; /* Altura del mapa igual al 80% del contenedor */
+    margin-left: 20px; /* Margen izquierdo para separar el mapa de la imagen */
+    align-self: flex-start; /* Alinear el mapa verticalmente con la imagen */
+}
+
+/* Media Query para pantallas medianas y grandes */
+@media(min-width: 768px) {
+    .mapa {
+        width: 50%; /* Ancho del mapa igual al 50% del contenedor */
+        height: auto; /* Altura automática */
+        margin-left: 10px; /* Margen izquierdo para separar el mapa de la imagen */
+        align-self: center; /* Alinear el mapa verticalmente al centro con la imagen */
+    }
+}
+
+
+
+/*ventajas2*/
+@media(min-width: 758px) {
+    .contenido-ventajas2 {
+        display: grid;
+        grid-template-columns: repeat(6, 1fr);
+        gap: 1rem;
+        padding: 1rem; /* Agregar padding al contenedor en pantallas grandes */
+    }
+}
+
+/* Estilos para ventajas en general */
+.ventajas2 {
+    background-image: url('../img/verde2.jpg');
+    background-repeat: repeat;
+    background-size: contain;
+    background-position: center center;
+    background-color: var(--azulOscuro);
+    text-align: center;
+    padding: 1rem;
+    /* Eliminamos el z-index negativo o ajustamos según sea necesario */
+    /* z-index: -1; */display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.ventaja2 {
+    color: var(--blanco);
+    text-align: justify;
+}
+
+.ventaja2 i {
+    font-size: 5rem;
+    margin-right: 100px;
+}
+
+.ventaja2 h3 {
+    font-size: 1.5rem;
+    text-align: center;
+}
+
+.ventaja2 p {
+    font-size: 2rem;
+}
+
+/* Añade el estilo para los enlaces dentro de .ventaja2 */
+.ventaja2 a {
+    text-decoration: none;
+    color: inherit; /* Usa el color del texto padre */
+    display: block; /* Hace que el enlace ocupe todo el espacio disponible */
+    padding: 1rem; /* Añade espacio alrededor del enlace para que sea clicable */
+}
+
+/* Media Query para pantallas medianas */
+@media(min-width: 768px) {
+    .ventaja2 {
+        text-align: left;
+    }
+}
+
+/* Media Query para pantallas grandes */
+@media(min-width: 1200px) {
+    .ventajas2 {
+        padding: 2rem;
+    }
+
+    .ventaja2 {
+        font-size: 2.2rem;
+    }
+
+    .ventaja2 i {
+        font-size: 5.5rem;
+    }
+}
+
+
+.texto-nosotros2 {
+    padding: 100px; /* Aumenta el relleno horizontal para hacer el fondo más grande */
+    position: relative; /* Cambia el posicionamiento a relativo */
+    z-index: 1; /* Coloca el texto por encima del fondo */
+    width: 100%; /* Ajusta la anchura del contenedor al 100% de la ventana gráfica */
+    font-size: 2rem; /* Aumenta el tamaño de la letra */
+    text-align: justify; /* Alinea el texto justificado */
+    font-family: 'Silk Serif Regular'; /* Establece la fuente del texto */
+    top: -60px;
+}
+
+.texto-nosotros2 * {
+    margin: 0;
+    padding: 10;
+}
+
+@media(min-width: 768px) {
+    .texto-nosotros2 {
+        padding: 60px; /* Aumenta el relleno en pantallas más grandes si es necesario */
+    }
+}
+
+
+.texto-nosotros2 h3 {
+    font-size: 4rem;
+    color: var(--azulClaro);
+    text-align: justify;
+    margin-bottom: 20px;
+}
+
+.texto-nosotros2 p {
+    font-size: 2.2rem;
+    text-align: justify;
+    margin-bottom: 20px;
+}
+
+@media(min-width: 768px) {
+    .texto-nosotros2 p {
+        text-align: justify; /* Alinear el texto a la izquierda en pantallas grandes */
+    }
+}
+
+
+
+
+.contenido-nosotros2 {
+    background-size: cover; /* Ajustar la imagen para cubrir todo el contenedor */
+    background-position: center; /* Posicionar la imagen al centro */
+    display: grid;
+    grid-template-rows: repeat(2, auto); /* Dos filas, la primera se ajusta automáticamente al contenido */
+    
+}
+
+@media(min-width: 768px) {
+    .contenido-nosotros2 {
+        grid-template-columns: repeat(2, 1fr); /* Dos columnas de igual tamaño */
+    }
+}
+
+.ofertas {
+    margin-top: 150px; /* Aumenta el espacio superior */
+    padding: 60px; /* Aumenta el espacio alrededor del contenido */
+    background-color: #f4f4f4; /* Color de fondo */
+    text-align: center; /* Alinear contenido al centro */
+    position: relative; /* Asegura que el z-index funcione */
+    z-index: 1; /* Asegúrate de que la sección de ofertas tenga un z-index igual al de ventajas2 */
+}
+
+/* Aumentar el tamaño del título */
+.ofertas h3 {
+    font-size: 3rem; /* Aumenta el tamaño de la letra del título */
+    color: #024769; /* Color del texto */
+    font-family: 'Silk Serif Regular';
+}
+
+.ofertas ul {
+    list-style-type: disc; /* Tipo de viñeta */
+    margin-top: 40px; /* Aumenta el espacio superior */
+    padding-left: 0; /* Elimina el espacio a la izquierda */
+    display: grid; /* Usa cuadrícula */
+    grid-template-columns: repeat(2, 1fr); /* Dos columnas de igual tamaño */
+    gap: 30px; /* Aumenta el espacio entre elementos */
+    justify-items: start; /* Alinea elementos al comienzo horizontalmente */
+    justify-content: space-between; /* Justifica los elementos horizontalmente */
+    align-items: center; /* Alinea los elementos verticalmente */
+    margin-left: 10px; /* Desplaza la lista 10px hacia la derecha */
+    font-size: 15px; /* Tamaño de la letra para la lista */
+}
+
+.ofertas li {
+    font-family: 'Arial', sans-serif; /* Fuente */
+    line-height: 1.5; /* Altura de línea */
+}
+
+.ofertas li:before {
+    margin-right: 10px; /* Espacio entre la viñeta y el texto */
+}
+
+/* Estilos para las ventanas emergentes */
+.popup {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.7); /* Fondo semi-transparente */
+    justify-content: center;
+    align-items: center;
+    z-index: 1000; /* Asegúrate de que las ventanas emergentes estén por encima de otros elementos */
+    display: none; /* Mantén el popup oculto inicialmente */
+}
+
+.popup.active {
+    display: flex; /* Muestra el popup cuando tiene la clase 'active' */
+}
+
+
+.popup-contenido {
+    background-color: #292323;
+    padding: 1rem;
+    border-radius: 8px;
+    text-align: center;
+    max-width: 90%;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 500000; /* Asegúrate de que el contenido del popup esté por encima del fondo y del popup */
+}
+
+.popup-contenido i {
+    font-size: 6.5rem; /* Tamaño del icono */
+    margin-bottom: 1rem; /* Espacio entre el icono y el texto */
+    margin-right: 20rem;
+}
+
+.popup-contenido h3 {
+    font-size: 2rem; /* Tamaño del texto */
+    margin-bottom: 1rem; /* Espacio entre el texto y el botón */
+}
+
+
+/* Establece el z-index de los enlaces dentro del popup */
+.popup-contenido a {
+    z-index: 1003; /* Asegúrate de que los enlaces sean clicables */
+}
+
+
+.btnCerrarPopup {
+    margin-top: 1rem;
+    padding: 0.5rem 1rem;
+    background-color: #ccc;
+    border: none;
+    cursor: pointer;
+}
+
+
+/* Estilos específicos para el logo de WhatsApp */
+.whatsapp {
+    position: fixed;
+    bottom: 20px; /* Distancia desde la parte inferior de la pantalla */
+    right: 20px; /* Distancia desde el lado derecho de la pantalla */
+    margin-right: 10px;
+    z-index: 999; /* Asegura que esté encima de otros elementos */
+}
+
+.whatsapp img {
+    width: 40px; /* Ajusta el ancho de la imagen según sea necesario */
+    height: auto; /* Mantén la proporción de aspecto */
+}
+
+
+
+.fondo {
+    background-image: url('../img/fondo0.png');
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: 100%;
+    background-position: center top 30px; /* Mover la imagen 20 píxeles hacia abajo desde la parte superior */
+    height: 40vh;
+    padding: 5px;
+    z-index: -1;
+}
+
+
+.content {
+    /* Estilos para el contenido de tu página */
+    width: 80%; /* Ancho del contenido */
+    margin: 0 auto; /* Centrar el contenido horizontalmente */
+    padding: 50px; /* Espaciado interior del contenido */
+
+}
+
+.red-social {
+    margin-right: 10px;
+    color: white;
+    text-decoration: none; /* Para eliminar el subrayado del enlace */
+}
+
+.red-social:hover {
+    color: white;
+}
+
+.icono-con-texto {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    font-family: 'Silk Serif Regular';
+}
+
+.icono-con-texto i {
+    font-size: 6.5rem; /* Tamaño del ícono */
+}
+
+.icono-con-texto span {
+    font-size: 3rem; /* Tamaño de la letra del texto */
+    margin-top: 5px; /* Espacio entre el ícono y el texto */
+}
+
+.aviso {
+    font-family: Silk Serif Regular;
+}
+
+.aviso-privacidad {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 60px;
+}
+
+.aviso-privacidad h2 {
+    text-align: center;
+    font-size: 24px; /* Tamaño de letra para el título */
+    margin-bottom: 20px;
+}
+
+.aviso-privacidad p {
+    margin-bottom: 20px;
+    text-align: justify;
+    font-size: 16px; /* Tamaño de letra para el texto del párrafo */
+}
+
+
+
+
+
+
+
